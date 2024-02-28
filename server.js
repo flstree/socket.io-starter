@@ -1,6 +1,6 @@
-import { profile } from "console";
 import { Server } from "socket.io";
 import { WEBSOCKET_EVENTS } from "./websocket.interface";
+import express from 'express';
 
 export class AppWebSocket {
   io;
@@ -114,6 +114,7 @@ export class AppWebSocket {
   };
 }
 
+const app = express();
 app.set("port", PORT);
 
 const server = app
